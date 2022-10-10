@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ResultsCard() {
+function ResultsCard({totalTip, totalPerson, handleReset}) {
   return (
     <div className='result--container'>
       <div className='calculation--container'>
@@ -9,17 +9,17 @@ function ResultsCard() {
             <h6>Tip Amount</h6>
             <p>/ person</p>
           </div>
-          <div>$4.27</div>
+          <div>${totalTip}</div>
         </div>
         <div className='mini--container'>
           <div>
-            <h6>Tip Amount</h6>
+            <h6>Total</h6>
             <p>/ person</p>
           </div>
-          <div>$4.27</div>
+          <div>${totalPerson}</div>
         </div>
       </div>
-      <button className='reset--button'>RESET</button>
+      <button className='reset--button' onClick={handleReset}>RESET</button>
 
     </div>
   )

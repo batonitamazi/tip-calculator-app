@@ -3,12 +3,12 @@ import BillInput from './controllers/BillInput'
 import PeopleNumberCard from './controllers/PeopleNumberCard'
 import TipPercentCard from './controllers/TipPercentCard'
 
-function ControllersCard() {
+function ControllersCard({bill, handleBillChange, tip, handleTipChange, people, handlePeopleChange}) {
   return (
     <div className='controller--container'>
-      <BillInput />
-      <TipPercentCard />
-      <PeopleNumberCard />
+      <BillInput billValue={bill} handleBillChange={handleBillChange}/>
+      <TipPercentCard tip={tip} handleTipChange={handleTipChange}/>
+      <PeopleNumberCard people={people} handlePeopleChange={handlePeopleChange}/>
     </div>
   )
 }

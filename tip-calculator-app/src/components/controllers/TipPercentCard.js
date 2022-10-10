@@ -20,15 +20,15 @@ const amounts = [
   },
 
 ]
-function TipPercentCard() {
+function TipPercentCard({tip, handleTipChange}) {
   return (
     <div>
       <label>Select $Tip</label>
       <div>
         {amounts.map((btn, index) => {
-          return (<input type="button" onClick={() => { console.log(btn.value) }} value={btn.value} key={index} />)
+          return (<input type="button" onClick={handleTipChange} defaultValue={btn.value} key={index} />)
         })}
-        <input type="number" placeholder='Custom'/>
+        <input type="number" placeholder='Custom' defaultValue="Custom" onChange={handleTipChange}/>
       </div>
     </div>
   )
