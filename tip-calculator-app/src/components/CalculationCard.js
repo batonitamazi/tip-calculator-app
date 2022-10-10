@@ -1,11 +1,12 @@
 import React from 'react'
 import ControllersCard from './ControllersCard'
+import ResultsCard from './ResultsCard'
 
 function CalculationCard() {
   return (
     <div className='calculation--card'>
-        <CalculationCard />
         <ControllersCard />
+        <ResultsCard   />
     </div>
   )
 }

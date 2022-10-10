@@ -12,11 +12,37 @@
   height: 53.14px;
 }
 .calculation--card {
-  width: 63.8%;
-  height: 47%;
+  width: 920px;
+  height: 481px;
   background-color: #FFFFFF;
   border-radius: 25px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.controller--container {
+  margin: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.result--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 32px;
+  width: 413px;
+  height: 417px;
+  background-color: #00474B;
+  border-radius: 15px;
+}
+.calculation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mini--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
