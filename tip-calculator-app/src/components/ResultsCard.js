@@ -6,17 +6,17 @@ function ResultsCard({totalTip, totalPerson, handleReset}) {
       <div className='calculation--container'>
         <div className='mini--container'>
           <div>
-            <h6>Tip Amount</h6>
-            <p>/ person</p>
+            <h6 className='amount--header'>Tip Amount</h6>
+            <p className='person--span'>/ person</p>
           </div>
-          <div>${totalTip}</div>
+          <div className='value--container'>${totalTip}</div>
         </div>
         <div className='mini--container'>
           <div>
-            <h6>Total</h6>
-            <p>/ person</p>
+            <h6 className='amount--header'>Total</h6>
+            <p className='person--span'>/ person</p>
           </div>
-          <div>${totalPerson}</div>
+          <div className='value--container'>${totalPerson}</div>
         </div>
       </div>
       <button className='reset--button' onClick={handleReset}>RESET</button>

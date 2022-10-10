@@ -1,3 +1,6 @@
+html {
+  font-family: "Space Mono"
+}
 .App {
   display: flex;
   flex-direction: column;
@@ -49,4 +52,27 @@
   padding-right: 40px;
   margin-bottom: 25px;
   color: white;
+}
+.amount--header {
+  font-size: 16px;
+}
+.person--span {
+  font-size: 13px;
+  color: #7F9D9F;
+}
+.value--container {
+  font-size: 48px;
+  color: #26C2AE;
+}
+.reset--button {
+  border: none;
+  width: 333px;
+  height: 48px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #26C2AE;
+  color: #00474B;
+  font-size: 20px;
+  font-family: 'Space Mono';
+  margin-left: 40px;
 }
