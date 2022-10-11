@@ -130,6 +130,7 @@ html {
   background-color: #F3F9FA;
   font-family: 'Space Mono';
   font-size: 24px;
+  text-align: right;
 }
 .tip--button--active {
   margin: 3px;

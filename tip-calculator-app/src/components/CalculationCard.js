@@ -8,18 +8,26 @@ function CalculationCard() {
   const [people, setPeople] = useState(0);
   const [totalTip, setTotalTip] = useState(0);
   const [totalPerson, setTotalPerson] = useState(0);
+  const [active, setActive] = useState(false)
   const handleBillChange = (e) => {
     setBill(e.target.value)
+    setActive(true)
   }
   const handleTipChange = (e) => {
     setTip(parseInt(e.target.value))
+    setActive(true)
   }
   const handlePeopeChange = (e) => {
     setPeople(e.target.value)
+    setActive(true)
   }
   const handleReset = () => {
+    setBill(0)
+    setTip(0)
+    setPeople(0)
     setTotalPerson(0)
     setTotalTip(0)
+    setActive(false)
   }
   useEffect(() => {
     if (bill > 0 && tip > 0 && people > 0) {
@@ -30,17 +38,17 @@ function CalculationCard() {
   }, [bill, tip, people, totalTip, totalPerson])
 
 
-  console.log(bill, tip, people)
   return (
     <div className='calculation--card'>
       <ControllersCard
-        billValue={bill}
+        bill={bill}
+        tip={tip}
         handleBillChange={handleBillChange}
         handleTipChange={handleTipChange}
         people={people}
         handlePeopleChange={handlePeopeChange}
       />
-      <ResultsCard totalTip={totalTip} totalPerson={totalPerson} handleReset={handleReset} />
+      <ResultsCard totalTip={totalTip} totalPerson={totalPerson} handleReset={handleReset} active={active} />
     </div>
   )
 }

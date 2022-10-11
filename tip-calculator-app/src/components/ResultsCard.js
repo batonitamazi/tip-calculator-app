@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ResultsCard({totalTip, totalPerson, handleReset}) {
+function ResultsCard({totalTip, active, totalPerson, handleReset}) {
   return (
     <div className='result--container'>
       <div className='calculation--container'>
@@ -19,7 +19,7 @@ function ResultsCard({totalTip, totalPerson, handleReset}) {
           <div className='value--container'>${(totalPerson).toFixed(2)}</div>
         </div>
       </div>
-      <button className='reset--button' onClick={handleReset}>RESET</button>
+      <button className={active ? 'reset--button': 'reset--button--off' } onClick={handleReset}>RESET</button>
 
     </div>
   )

@@ -6,7 +6,7 @@ function PeopleNumberCard({people, handlePeopleChange}) {
             <label htmlFor="people-amount" className='input--label'>people</label>
             <div>
                 <input className="input-field" type="number" name="amount" id="people-amount"
-                    aria-label="people-amount" placeholder={people} onChange={handlePeopleChange}/>
+                    aria-label="people-amount" value={people} onChange={handlePeopleChange}/>
             </div>
         </div>
   )

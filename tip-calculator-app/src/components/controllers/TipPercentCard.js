@@ -1,6 +1,27 @@
 import React from 'react'
 
-
+const normalStyle = {
+  margin: "3px",
+  width: "117px",
+  height: "48px",
+  border: "none",
+  borderRadius: "5px",
+  backgroundColor: "#00474B",
+  color: "#FFFFFF",
+  fontSize: "24px",
+  fontFamily: 'Space Mono'
+}
+const selectedStyle = {
+  margin: "3px",
+  width: "117px",
+  height: "48px",
+  border: "none",
+  borderRadius: "5px",
+  backgroundColor: "#9FE8DF",
+  color: "#00474B",
+  fontSize: "24px",
+  fontFamily: 'Space Mono'
+}
 
 const amounts = [
   {
@@ -20,15 +41,29 @@ const amounts = [
   },
 
 ]
-function TipPercentCard({handleTipChange}) {
+function TipPercentCard({tip, handleTipChange }) {
   return (
     <div>
       <label className='input--label'>Select $Tip</label>
-      <div>
+      <div className='tip--button--container'>
         {amounts.map((btn, index) => {
-          return (<button type="button" className="tip--button" onClick={handleTipChange} value={btn.value} key={index}>{btn.value}%</button>)
+          return (
+            <button
+              type="button"
+              className="tip--button"
+              onClick={handleTipChange}
+              value={btn.value}
+              key={index}
+              style={tip === btn.value ? selectedStyle : normalStyle}
+            >{btn.value}%
+            </button>)
         })}
-        <input className="custom--button" type="number" placeholder='Custom' defaultValue="Custom" onChange={handleTipChange}/>
+        <input
+          className="custom--button"
+          type="number"
+          placeholder='Custom'
+          onChange={handleTipChange}
+        />
       </div>
     </div>
   )
