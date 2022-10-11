@@ -2,7 +2,6 @@ import React from 'react'
 
 const normalStyle = {
   margin: "3px",
-  
   border: "none",
   borderRadius: "5px",
   backgroundColor: "#00474B",
@@ -13,10 +12,9 @@ const normalStyle = {
 }
 const selectedStyle = {
   margin: "3px",
-  
   border: "none",
   borderRadius: "5px",
-  backgroundColor: "#9FE8DF",
+  backgroundColor: "#26C2AE",
   color: "#00474B",
   fontSize: "24px",
   fontFamily: 'Space Mono',
@@ -44,8 +42,8 @@ const amounts = [
 ]
 function TipPercentCard({tip, handleTipChange }) {
   return (
-    <div>
-      <label className='input--label'>Select $Tip</label>
+    <div className='input--container'>
+      <label className='input--label'>Select Tip %</label>
       <div className='tip--button--container'>
         {amounts.map((btn, index) => {
           return (
