@@ -4,10 +4,10 @@ import React from 'react'
 function BillInput({bill, handleBillChange}) {
     return (
         <div>
-            <label htmlFor="bill-amount">Bill</label>
+            <label htmlFor="bill-amount" className='input--label'>Bill</label>
             <div>
                 <input className="input-field" type="number" name="amount" id="bill-amount"
-                    aria-label="bill-amount" value={bill} onChange={handleBillChange}/>
+                    aria-label="bill-amount" placeholder={bill} onChange={handleBillChange}/>
             </div>
         </div>
 

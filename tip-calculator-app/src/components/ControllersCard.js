@@ -6,7 +6,7 @@ import TipPercentCard from './controllers/TipPercentCard'
 function ControllersCard({bill, handleBillChange, tip, handleTipChange, people, handlePeopleChange}) {
   return (
     <div className='controller--container'>
-      <BillInput billValue={bill} handleBillChange={handleBillChange}/>
+      <BillInput bill={bill} handleBillChange={handleBillChange}/>
       <TipPercentCard tip={tip} handleTipChange={handleTipChange}/>
       <PeopleNumberCard people={people} handlePeopleChange={handlePeopleChange}/>
     </div>

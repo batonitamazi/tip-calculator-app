@@ -20,15 +20,15 @@ const amounts = [
   },
 
 ]
-function TipPercentCard({tip, handleTipChange}) {
+function TipPercentCard({handleTipChange}) {
   return (
     <div>
-      <label>Select $Tip</label>
+      <label className='input--label'>Select $Tip</label>
       <div>
         {amounts.map((btn, index) => {
-          return (<input type="button" onClick={handleTipChange} defaultValue={btn.value} key={index} />)
+          return (<button type="button" className="tip--button" onClick={handleTipChange} value={btn.value} key={index}>{btn.value}%</button>)
         })}
-        <input type="number" placeholder='Custom' defaultValue="Custom" onChange={handleTipChange}/>
+        <input className="custom--button" type="number" placeholder='Custom' defaultValue="Custom" onChange={handleTipChange}/>
       </div>
     </div>
   )

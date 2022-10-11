@@ -12,15 +12,12 @@ function CalculationCard() {
     setBill(e.target.value)
   }
   const handleTipChange = (e) => {
-    setTip(Number(e.target.value))
+    setTip(parseInt(e.target.value))
   }
   const handlePeopeChange = (e) => {
     setPeople(e.target.value)
   }
   const handleReset = () => {
-    setBill(0)
-    setTip(0)
-    setPeople(0)
     setTotalPerson(0)
     setTotalTip(0)
   }
@@ -33,13 +30,12 @@ function CalculationCard() {
   }, [bill, tip, people, totalTip, totalPerson])
 
 
-  console.log(totalTip)
+  console.log(bill, tip, people)
   return (
     <div className='calculation--card'>
       <ControllersCard
         billValue={bill}
         handleBillChange={handleBillChange}
-        tip={tip}
         handleTipChange={handleTipChange}
         people={people}
         handlePeopleChange={handlePeopeChange}
