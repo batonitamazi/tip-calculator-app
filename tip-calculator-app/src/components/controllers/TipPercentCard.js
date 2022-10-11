@@ -2,25 +2,26 @@ import React from 'react'
 
 const normalStyle = {
   margin: "3px",
-  width: "117px",
-  height: "48px",
+  
   border: "none",
   borderRadius: "5px",
   backgroundColor: "#00474B",
   color: "#FFFFFF",
   fontSize: "24px",
-  fontFamily: 'Space Mono'
+  fontFamily: 'Space Mono',
+  cursor: 'pointer',
 }
 const selectedStyle = {
   margin: "3px",
-  width: "117px",
-  height: "48px",
+  
   border: "none",
   borderRadius: "5px",
   backgroundColor: "#9FE8DF",
   color: "#00474B",
   fontSize: "24px",
-  fontFamily: 'Space Mono'
+  fontFamily: 'Space Mono',
+  cursor: 'pointer',
+
 }
 
 const amounts = [
@@ -50,9 +51,9 @@ function TipPercentCard({tip, handleTipChange }) {
           return (
             <button
               type="button"
-              className="tip--button"
               onClick={handleTipChange}
               value={btn.value}
+              className="tip--button"
               key={index}
               style={tip === btn.value ? selectedStyle : normalStyle}
             >{btn.value}%
