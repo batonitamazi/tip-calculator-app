@@ -11,17 +11,22 @@ function CalculationCard() {
   const [active, setActive] = useState(false)
   const [error, setError] = useState("");
   const handleBillChange = (e) => {
-    setBill(Number(e.target.value))
+    setBill(e.target.value)
     setActive(true)
-    
+
   }
   const handleTipChange = (e) => {
     setTip(Number(e.target.value))
     setActive(true)
   }
   const handlePeopeChange = (e) => {
-    setPeople(Number(e.target.value))
-      setActive(true)
+    setError("")
+    setPeople(e.target.value)
+    setActive(true)
+    if (Number(e.target.value) === 0) {
+      setError("Can't be a zero")
+    }
+
   }
   const handleReset = () => {
     setBill(0)
@@ -41,11 +46,11 @@ function CalculationCard() {
     <div className='calculation--card'>
       <ControllersCard
         bill={bill}
-        error={error}
         tip={tip}
         handleBillChange={handleBillChange}
         handleTipChange={handleTipChange}
         people={people}
+        error={error}
         handlePeopleChange={handlePeopeChange}
       />
       <ResultsCard totalTip={totalTip} totalPerson={totalPerson} handleReset={handleReset} active={active} />
