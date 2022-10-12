@@ -11,3 +11,20 @@ Users should be able to:
 ### ScreenShoots
 ![](./tip-calculator-app/public/screenshots/mobile.png)
 ![](./tip-calculator-app/public/screenshots/desktop.png)
+
+### Links
+- Solution URL: [](https://github.com/batonitamazi/tip-calculator-app)
+- Live Site URL: [](https://tip-calculator-batonitamazi.netlify.app)
+
+### Built with
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- Javascript
+
+## Author
+
+- Github - [Tamazi Mirianashvili](https://github.com/batonitamazi)
+- Linkedin - [@Tamazi Mirianashvili](https://www.linkedin.com/in/tamazi-mirianashvili-735600210/)
