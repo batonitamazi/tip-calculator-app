@@ -157,11 +157,19 @@ html {
 }
 @media(max-width:1200px) and (min-width:900px){
   .calculation--card {
-    width: 90%;
-    height: 90%;
-    flex-direction: column;
+    width: 80%;
+    height: 70%;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+  }
+  .controller--container {
+    width: 80%;
+    height: 80%;
+  }
+  .result--container {
+    height: 85%;
+    width: 80%;
   }
 }
 
