@@ -7,7 +7,7 @@ function PeopleNumberCard({ people, handlePeopleChange }) {
       <div className='bill-input-container'>
         <img src='./assets/icon-person.svg' className="person-logo" alt="logo" />
         <input className="input-field" type="number" name="amount" id="people-amount"
-          aria-label="people-amount" value={people} onChange={handlePeopleChange} />
+          aria-label="people-amount" value={people} onChange={handlePeopleChange} min="0" />
       </div>
     </div>
   )

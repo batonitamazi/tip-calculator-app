@@ -18,8 +18,8 @@ html {
   height: 53.14px;
 }
 .calculation--card {
-  width: 50%; 
-  height: 50%;
+  width: 60%; 
+  height: 60%;
   background-color: #FFFFFF;
   border-radius: 25px;
   display: flex;
@@ -27,10 +27,11 @@ html {
   justify-content: space-between;
 }
 .controller--container {
-  margin: 48px; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 48px;
+  
 }
 .result--container {
   display: flex;
@@ -56,6 +57,12 @@ html {
   padding-right: 40px;
   margin-bottom: 25px;
   color: white;
+}
+.input--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .bill-input-container {
   width: 100%;
@@ -88,6 +95,7 @@ html {
   color: #00474B;
   font-size: 20px;
   font-family: 'Space Mono';
+  cursor: pointer;
 }
 .reset--button--off {
   border: none;
@@ -103,6 +111,7 @@ html {
 }
 .input--label {
   font-size: 16px;
+  margin-bottom: 6px;
   color: #5E7A7D;
 }
 .input-field {
@@ -136,11 +145,25 @@ html {
   width: 117px;
   height: 48px;
 }
+.label--container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+}
+@media(max-width:1200px) and (min-width:900px){
+  .calculation--card {
+    width: 90%;
+    height: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
 
-@media (max-width: 1000px){
+@media (max-width: 900px){
   .App {
     justify-content: space-between;
-    height: 833px;
   }
   
   .App-logo{
@@ -155,7 +178,11 @@ html {
     justify-content: space-around;
   }
   .controller--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
+    height: 100%;
   }
   .bill-input-container {
     width: 80%;
@@ -187,6 +214,7 @@ html {
   }
   .reset--button--off {
     width: 90%;
+    cursor: pointer;
 
   }
   .input--container {

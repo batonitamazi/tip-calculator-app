@@ -62,6 +62,7 @@ function TipPercentCard({tip, handleTipChange }) {
           type="number"
           placeholder='Custom'
           onChange={handleTipChange}
+          min="0"
         />
       </div>
     </div>

@@ -9,17 +9,19 @@ function CalculationCard() {
   const [totalTip, setTotalTip] = useState(0);
   const [totalPerson, setTotalPerson] = useState(0);
   const [active, setActive] = useState(false)
+  const [error, setError] = useState("");
   const handleBillChange = (e) => {
-    setBill(e.target.value)
+    setBill(Number(e.target.value))
     setActive(true)
+    
   }
   const handleTipChange = (e) => {
-    setTip(parseInt(e.target.value))
+    setTip(Number(e.target.value))
     setActive(true)
   }
   const handlePeopeChange = (e) => {
-    setPeople(e.target.value)
-    setActive(true)
+    setPeople(Number(e.target.value))
+      setActive(true)
   }
   const handleReset = () => {
     setBill(0)
@@ -34,14 +36,12 @@ function CalculationCard() {
       setTotalTip((bill * (tip / 100)) / people)
       setTotalPerson(bill / people + ((bill * (tip / 100)) / people))
     }
-
   }, [bill, tip, people, totalTip, totalPerson])
-
-
   return (
     <div className='calculation--card'>
       <ControllersCard
         bill={bill}
+        error={error}
         tip={tip}
         handleBillChange={handleBillChange}
         handleTipChange={handleTipChange}
