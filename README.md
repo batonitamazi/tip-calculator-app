@@ -13,8 +13,8 @@ Users should be able to:
 ![](./tip-calculator-app/public/screenshots/desktop.png)
 
 ### Links
-- Solution URL: [](https://github.com/batonitamazi/tip-calculator-app)
-- Live Site URL: [](https://tip-calculator-batonitamazi.netlify.app)
+- Solution URL: [code](https://github.com/batonitamazi/tip-calculator-app)
+- Live Site URL: [host](https://tip-calculator-batonitamazi.netlify.app)
 
 ### Built with
 - Semantic HTML5 markup
